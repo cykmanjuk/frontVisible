@@ -1,0 +1,33 @@
+.breadcrumbs {
+    margin-bottom: 24px;
+    @media screen and (max-width: $sm) {
+        overflow-x: scroll;
+      }
+    .list {
+        @extend %start;
+        .item {
+            margin-right: 32px;
+            position: relative;
+            .link {
+                color: #646464;
+                font-size: rem(12);
+                font-weight: 400;
+            }
+            .icon {
+                position: absolute;
+                bottom: 7px;
+                right: -16px;
+            }
+            &:last-child {
+                pointer-events: none;
+                opacity: .5;
+                .link {
+                    pointer-events: none;
+                }
+                .icon {
+                    display: none;
+                }
+            }
+        }
+    }
+}

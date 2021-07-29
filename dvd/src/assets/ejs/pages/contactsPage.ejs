@@ -1,0 +1,142 @@
+<% include ../includes/head %>
+<% include ../includes/mobile_menu %>
+<% include ../includes/header %>
+<% include ../includes/breadcrumbs %>
+
+
+<article class="contacts">
+    <div class="titleWrap">
+        <h1>Контакты</h1>
+    </div>
+    <div class="inner grid12">
+        <div class="mapWrap x9 lg8 md12">
+            <div class="contactsBlock">
+                <div class="row">
+                    <div class="title">
+                        <p>Телефон:</p>
+                    </div>
+                    <div class="phone">
+                        <a href="tel:+79150622211">+7 (915) 062-22-11</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="title">
+                        <p>E-mail: </p>
+                    </div>
+                    <div class="mail">
+                        <a href="mailto: info@dvdv.me"> info@dvdv.me</a>
+                    </div>
+                </div>
+                <div class="adress">
+                    <div class="title">
+                        <p>Адрес:</p>
+                    </div>
+                    <div class="text">
+                        <p>400002, Город, ул. им. Неизвестного, 9</p>
+                    </div>
+                    <div class="time">
+                        <p>Пн - Пт: 9:00 - 18:00</p>
+                    </div>
+                </div>
+                <% include ../includes/socialList %>
+            </div>
+            <div id="map"></div>
+        </div>
+        <div class="contactsForm x3 lg4 md12">
+            <div class="title">
+                <p>Обратная связь</p>
+            </div>
+            <form class="form">
+				<div class="field">
+					<input type="text">
+					<label>Ваше имя</label>
+				</div>
+	
+				<div class="field">
+					<input type="text" class="phone">
+					<label>Ваш телефон</label>
+				</div>
+
+				<div class="checkbox">
+					<div class="checkboxField">
+						<input type="checkbox" id="check1" name="sogl" >
+						<label class="checkbox__label" for="check1"></label>
+					</div>
+					<label class="checkboxText" for="check1">Согласен на <a href="/soglasie/" target="_blank">обработку персональных данных</a></label>
+				</div>
+	
+
+				<div class="btnWrap">
+					<button class="btn full">Получить консультацию</button>
+				</div>
+	
+			</form>
+        </div>
+    </div>
+</article>
+
+
+<% include ../includes/footer %>
+<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+<script>
+
+         
+    // Как только будет загружен API и готов DOM, выполняем инициализацию
+        ymaps.ready(init);
+ 
+        function init () {
+            // Создание экземпляра карты и его привязка к контейнеру с
+            // заданным id ("map")
+            var myMap = new ymaps.Map('map', {
+                    // При инициализации карты, обязательно нужно указать
+                    // ее центр и коэффициент масштабирования
+                    center: [45.049819, 38.969797], // Дальняя 39\5
+                    zoom: 17,
+                     controls: []
+                });
+            
+                   myPlacemark1 = new ymaps.Placemark(myMap.getCenter(), {
+                    hintContent: 'ул.Гагарина 108',
+                    balloonContent: 'ул.Гагарина 108'
+                }, {
+                    // Опции.
+                    // Необходимо указать данный тип макета.
+                    iconLayout: 'default#image',
+                    // Своё изображение иконки метки.
+                    iconImageHref: 'img/map-icon.svg',
+                    // Размеры метки.
+                    iconImageSize: [30, 32],
+                    // Смещение левого верхнего угла иконки относительно
+                    // её "ножки" (точки привязки).
+                    iconImageOffset: [-20, -30]
+                }),
+                // После того как метка была создана, ее
+                // можно добавить на карту.
+                myMap.geoObjects.add(myPlacemark1);
+
+                // Добавим на карту ползунок масштаба и линейку.
+                myMap.controls.add('zoomControl');
+                myMap.controls.add('rulerControl', {
+                    // Отключим отображение масштабного отрезка рядом с линейкой.
+                    // Подробнее о настройке опций.
+                    scaleLine: true
+                });
+        };
+           </script>
+
+</body>
+</html>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+

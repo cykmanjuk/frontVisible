@@ -1,0 +1,25 @@
+.socialList {
+    display: flex;
+    .socialItem {
+       margin-right: 1px;
+        .socialLink {
+            display: flex;
+            align-items: center;
+            transition: opacity .3s;
+            svg {
+                path {
+                    transition: fill .3s;
+                }
+            }
+        }
+        &:hover {
+            .socialLink {
+                opacity: .7;
+                svg {
+                    path {
+                    }
+                }
+            }
+        }
+    }
+}

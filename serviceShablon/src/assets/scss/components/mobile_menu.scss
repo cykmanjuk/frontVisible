@@ -1,0 +1,152 @@
+.mobileMenu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 100;
+    max-width: 320px;
+    width: 100%;
+    box-shadow: 1px 1px 1px rgba(#000, .3);
+    transition: left .3s;
+    .mmTop {
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .icon {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            svg{ 
+                display: block;
+                margin-right: 8px;
+            }
+        }
+        .cross {
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            position: relative;
+            transform: rotate(45deg);
+            .line {
+               position: absolute;
+               background-color: var(--cross);
+                &.l1 {
+                    width: 100%;
+                    height: 2px;
+                    top: calc(50% - 1px);
+                    left: 0;
+                }
+                &.l2 {
+                    width: 2px;
+                    height: 100%;
+                    left: calc(50% - 1px);
+                    top: 0;
+                    
+                }
+            }
+        }
+    }
+    .mmBody {
+        position: relative;
+        height: calc(100vh - 55px);
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+            .list {
+                margin-bottom: 32px;
+                flex-grow: 1;
+                .item {
+                    border-bottom: 1px solid rgba(#000, .2);
+                    .link {
+                        display: block;
+                        padding: 8px 15px;
+                        position: relative;
+                        font-size: 16px;
+                        color: var(--link);
+                        &:before {
+                            content: "";
+
+                        }
+                    }
+                    p.link {
+                        position: relative;
+                        &:before {
+                            content: "";
+                            width: 8px;
+                            position: absolute;
+                            height: 8px;
+                            border-top: 1px solid var(--primary);
+                            border-right: 1px solid var(--primary);
+                            top: 50%;
+                            right: 10px;
+                            transform: translateY(-50%) rotate(45deg);
+                        }
+                    }
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        .mmBottom {
+            position: relative; 
+            bottom: 0;
+            padding: 8px 12px 32px;
+            .phone {
+                display: flex;
+                align-items: center;
+                margin-bottom: 12px;
+                svg {
+                    margin-right: 8px;
+                }
+                span {
+                    font-size: rem(14);
+                    font-weight: 700;
+                }
+            }
+            .workTime {
+                margin-bottom: 12px;
+                p {
+                    font-size: rem(14);
+                }
+            }
+            .adress {
+                margin-bottom: 12px;
+                p {
+                    font-size: rem(14);
+                }
+            }
+            .mobileSearch {
+             .form {
+                 display: flex;
+                 justify-content: space-between;
+                 .field {
+                     width: calc(100% - 56px);
+                 }
+                 .btnWrap  {
+                     width: 40px;
+                     display: flex;
+                     align-items: center;  
+                     justify-content: center;
+                     height: 40px;
+                     .btn {
+                         width: 100%;
+                         min-width: initial;
+                         padding: 0;
+                         border: 1px solid var(--primary);
+                         svg {
+                             path {
+                                 fill: var(--primary);
+                             }
+                         }
+                     }
+                 }
+             }   
+            }
+        }
+    }
+    &.active {
+        left: 0;
+    }
+}

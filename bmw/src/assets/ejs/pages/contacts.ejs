@@ -1,0 +1,102 @@
+<% include ../includes/head %>
+<% include ../includes/mobile_menu %>
+<% include ../includes/header %>
+<% include ../includes/breadcrumbs %>
+
+
+<article class="contactPage">
+    <div class="titleWrap">
+        <div class="title">
+            <p>Контакты</p>
+        </div>
+    </div>
+    <div class="inner grid12">
+        <div class="left x3 md4 sm6 xs12">
+            <div class="phone">
+                <a href="tel:+78000000007">8 (800) 00-00-007</a>
+            </div>
+            <div class="text">
+                <p>ООО «Название» Маркетплейс запчастей</p>
+                <p>ОГРН 1082360454445462</p>
+                <p>ИПП 254444478</p>
+            </div>
+            <div class="adress">
+                <p><b>Адрес:</b> г. Москва ул. Парковая 45</p>
+            </div>
+            <div class="btnMore">
+                <div class="text RtoL">
+                    <p>Скачать реквизиты</p>
+                </div>
+                <div class="icon"></div>
+            </div>
+            <div class="btnWrap">
+                <a href="" class="btn full">
+                    <span>Написать нам</span>
+                </a>
+            </div>
+        </div>
+        <div class="right x9 md8 sm6 xs12">
+            <div class="map" id="map"></div>
+        </div>
+    </div>
+</article>
+
+
+<% include ../includes/footer %>
+
+    <script>
+
+         
+            // Как только будет загружен API и готов DOM, выполняем инициализацию
+                ymaps.ready(init);
+         
+                function init () {
+                    // Создание экземпляра карты и его привязка к контейнеру с
+                    // заданным id ("map")
+                    var myMap = new ymaps.Map('map', {
+                            // При инициализации карты, обязательно нужно указать
+                            // ее центр и коэффициент масштабирования
+                            center: [45.049819, 38.969797], // Дальняя 39\5
+                            zoom: 17,
+                             controls: []
+                        });
+                    
+                           myPlacemark1 = new ymaps.Placemark(myMap.getCenter(), {
+                            hintContent: 'ул.Гагарина 108',
+                            balloonContent: 'ул.Гагарина 108'
+                        }, {
+                            // Опции.
+                            // Необходимо указать данный тип макета.
+                            iconLayout: 'default#image',
+                            // Своё изображение иконки метки.
+                            iconImageHref: 'assets/img/map-icon.png',
+                            // Размеры метки.
+                            iconImageSize: [30, 32],
+                            // Смещение левого верхнего угла иконки относительно
+                            // её "ножки" (точки привязки).
+                            iconImageOffset: [-20, -30]
+                        }),
+                        // После того как метка была создана, ее
+                        // можно добавить на карту.
+                        myMap.geoObjects.add(myPlacemark1);
+        
+                        // Добавим на карту ползунок масштаба и линейку.
+                        myMap.controls.add('zoomControl');
+                        myMap.controls.add('rulerControl', {
+                            // Отключим отображение масштабного отрезка рядом с линейкой.
+                            // Подробнее о настройке опций.
+                            scaleLine: true
+                        });
+                };
+                   </script>
+
+
+</body>
+</html>
+
+
+ 
+
+
+
+

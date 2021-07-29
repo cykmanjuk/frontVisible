@@ -1,0 +1,46 @@
+//BURGER START--------------------------------------------
+.burger {
+    cursor: pointer;
+    width: 24px;
+    height: 16px;
+    position: relative;
+    display: none;
+    @media screen and (max-width: $md) {
+     display: block;
+    }
+    .line {
+      position: absolute;
+      left: 0;
+      height: 2px;
+      background-color: #000;
+      transition: width .3s;
+      width: 100%;
+      &.l1 {
+        top: 0;
+      }
+      &.l2 {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &.l3 {
+        bottom: 0;
+      }
+    }
+    &:hover {
+      
+      .line {
+        width: 100%;
+      }
+    }
+    &.active {
+      
+      .line {
+        width: 100%;
+      }
+    }
+  }
+
+  // BURGER END ---------------------------------------------
+
+
+  

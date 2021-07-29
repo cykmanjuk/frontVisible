@@ -1,0 +1,20 @@
+.auth {
+    margin-right: 5vw;
+    display: flex;
+    align-items: baseline;
+    @media screen and (max-width: $lg) {
+        flex-grow: 1;
+    }
+    .list {
+        display: flex;
+        .item {
+            margin-right: 2vw;
+            @extend %fill;
+            .link {
+                color: var(--gray);
+                font-size: rem(14);
+                padding: 6px 12px 8px;
+            }
+        }
+    }
+}

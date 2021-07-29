@@ -1,0 +1,16 @@
+.phones {
+    .list {
+        display: flex;
+        .item {
+            margin-right: 2vw;
+            .link {
+                font-size: rem(17);
+                font-weight: 700;
+                transition: color .3s;
+                &:hover {
+                    color: var(--primary);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,185 @@
+.comparisonPage {
+    display: flex;
+    .left {
+        width: 250px;
+        @media screen and (max-width: $sm) {
+            width: 200px;
+        }
+        @media screen and (max-width: $xs) {
+            width: 150px;
+        }
+        .btnWrap {
+            margin-bottom: 20px;
+            .btn {
+                width: 100%;
+                margin-bottom: 12px;
+            }
+        }
+        .block {
+
+            .title {
+                min-height: 40px;
+                margin-bottom: 8px;
+                p {
+                    font-size: rem(16);
+                    font-weight: 700;
+                    line-height: 1.1;
+                }
+            }
+            .text {
+                min-height: 40px;
+                margin-bottom: 8px;
+                p {
+                    font-size: rem(14);
+                    font-weight: 400; 
+                }
+                &.active {
+                    p {
+                        font-weight: 700;
+                        line-height: 1.1;
+                    }
+                }
+            }
+        }
+    }
+    .right {
+        padding-left: 40px;
+        width: calc(100% - 250px);
+        @media screen and (max-width: $sm) {
+            width: calc(100% - 200px);
+            padding-left: 20px;
+        }
+        @media screen and (max-width: $xs) {
+            width: calc(100% - 150px);
+            padding-left: 10px;
+        }
+        .list {
+            position: relative;
+            .sliderBtn {
+                position: absolute;
+            }
+            .item {
+                padding: 0 20px;
+                position: relative;
+                .itemImg {
+                    margin-bottom: 20px;
+                    height: 92px;
+                    min-height: 92px;
+                    max-height: 92px;
+                    img {
+                        object-fit: contain;
+                        height: 100%;
+                    }
+                }
+                .cross {
+                    transform: rotate(-45deg);
+                    cursor: pointer;
+                    position: absolute;
+                    top: 15px;
+                    right: 50px;
+                    width: 20px;
+                    height: 20px;
+                    .line {
+                        overflow: hidden;
+                         transform: translate(-50%, -50%);
+                         background-color: #ccc;
+                         &.l1 {
+                             position: absolute;
+                             top: 50%;
+                             left: 50%;
+                             width: 15px;
+                             height: 2px;
+                             &:before {
+                                 content: "";
+                                 position: absolute;
+                                 top: 0%;
+                                 left: -15px;
+                                 width: 15px;
+                                 height: 2px;
+                                 background-color: var(--text);
+                                 transition: left .3s;
+                             }
+                         }
+                         &.l2 {
+                             position: absolute;
+                             top: 50%;
+                             left: 50%;
+                             width: 2px;
+                             height: 15px;
+                             &:before {
+                                 content: "";
+                                 position: absolute;
+                                 top: 15px;
+                                 left: 0%;
+                                 width: 2px;
+                                 height: 15px;
+                                 background-color: var(--text);
+                                 transition: top .3s;
+                             }
+                         }
+                     }
+                     &:hover {
+                         .line {
+                             &.l1 {
+                                 &:before {
+                                     left: 0;
+                                 }
+                             }
+                             &.l2 {
+                                 &:before {
+                                     top: 0;
+                                 }
+                             }
+                         }
+                     }
+                }
+                .itemTitle {
+                    min-height: 40px;
+                    margin-bottom: 8px;
+                    p {
+                        font-size: rem(10);
+                    }
+                }
+                .text {
+                    min-height: 40px;
+                    margin-bottom: 8px;
+                    @extend %between;
+                    p {
+                        font-size: rem(14);
+                    }
+                    a {
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+body .zweb-slider .zweb-slider-wrap {
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

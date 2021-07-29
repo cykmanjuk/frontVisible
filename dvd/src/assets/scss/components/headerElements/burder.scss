@@ -1,0 +1,49 @@
+//BURGER START--------------------------------------------
+.burger {
+    cursor: pointer;
+    min-width: 20px;
+    height: 16px;
+    position: relative;
+    margin-left: 20px;
+    display: none;
+    @media screen and (max-width: 1420px) {
+      display: block;
+    }
+    .line {
+      position: absolute;
+      left: 0;
+      height: 2px;
+      background-color: #000;
+      transition: width .3s;
+      &.l1 {
+        top: 0;
+        width: 100%;
+      }
+      &.l2 {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+      }
+      &.l3 {
+        bottom: 0;
+        width: 100%;
+      }
+    }
+    &:hover {
+      
+      .line {
+        width: 100%;
+      }
+    }
+    &.active {
+      
+      .line {
+        width: 100%;
+      }
+    }
+  }
+
+  // BURGER END ---------------------------------------------
+
+
+  

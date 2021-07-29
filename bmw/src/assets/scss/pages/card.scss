@@ -1,0 +1,265 @@
+.card {
+    .inner {
+        .left {
+           display: flex;
+           flex-wrap: wrap;  
+           .cardSlider {
+               width: 50%;
+               margin-right: 24px;
+               display: flex;
+               flex-wrap: wrap;
+               margin-bottom: 24px;
+               @media screen and (max-width: $lg) {
+                width: 100%;
+                margin-right: 0;
+              }
+                .littleSlider {
+                    width: 100px;
+                    margin-right: 24px;
+                    @media screen and (max-width: $xs) {
+                        width: 100%;
+                        margin-right: 0;
+                      }
+                    .list {
+                        .item {
+                            img {
+                                width: 100%;
+                                height: 70px;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+                .bigSlider {
+                    width: calc(100% - 124px);
+                    @media screen and (max-width: $xs) {
+                        width: 100%;
+                        order: -1;
+                        margin-bottom: 24px;
+                      }
+                    .list {
+                        .item {
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                max-height: 350px;
+                            }
+                        }
+                    }
+                }
+            }
+            .characteristics {
+                width: calc(50% - 24px);
+                padding-right: 5vw;
+                margin-bottom: 24px;
+                @media screen and (max-width: $lg) {
+                    width: 100%;
+                    order: -1;
+                    padding-right: 0;
+                  }
+                .title {
+                    margin-bottom: 24px;
+                    p {
+                       font-size: rem(14);
+                       font-weight: 700;
+                       text-transform: uppercase;
+                    }
+                }
+                table {
+                    tr {
+                        &:last-child {
+                           border-bottom: none;
+                        }
+                        td {
+                            font-size: rem(14);
+                            &:last-child {
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+            }
+            .cardDescription {
+                width: 100%;
+                .title {
+                    margin-bottom: 24px;
+                    p {
+                        font-size: rem(18);
+                        font-weight: 700;
+                    }
+                }
+                .text {
+                    p {
+                        font-size: rem(14);
+                        line-height: 1.4;
+                        margin-bottom: 12px;                        
+                    }
+                }
+            }
+        }
+        .right {
+            .stickyBlock {
+                position: sticky;
+                top: 75px;
+                .row {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 24px;
+                    .price {
+                        margin-right: 24px;
+                        p {
+                            font-size: rem(24);
+                            font-weight: 700;
+                        }
+                    }
+                    .favorite {
+                        display: flex;
+                        align-items: baseline;
+                        .icon {
+                            margin-right: 8px;
+                        }
+                        .text {
+                            p {
+                                color: #565B66;
+                                font-size: rem(12);
+                            }
+                        }
+                    }
+                }
+                .btnWrap {
+                    margin-bottom: 12px;
+                }
+                .seller {
+                    display: flex;
+                    align-items: baseline;
+                    margin-bottom: 12px;
+                    .title {
+                        margin-right: 12px;
+                        p {
+                            font-size: rem(14px);
+                        }
+                    }
+                    .link {
+                        a {
+                            font-size: rem(14);
+                            font-weight: 700;
+                            text-decoration: underline;
+                            transition: color .3s;
+                            &:hover {
+                                color: var(--primary);
+                            }
+                        }
+                    }
+                }
+                .phones {
+                    margin-bottom: 12px;
+                    .phone {
+                        a {
+                            font-size: rem(23);
+                            font-weight: 700;
+                            color: var(--secondary);
+                            transition: color .3s;
+                            &:hover {
+                                color: var(--primary);
+                            }
+                        }
+                    }
+                }
+                .mail {
+                    margin-bottom: 12px;
+                    a {
+                        font-size: rem(14);
+                        color: var(--secondary);
+                        transition: color .3s;
+                        &:hover {
+                            color: var(--primary);
+                        }
+                    }
+                }
+                .adress {
+                    margin-bottom: 12px;
+                    p {
+                        font-size: rem(14);
+                    }
+                    a {
+                        color: var(--secondary);
+                        text-decoration: underline;
+                        font-size: rem(14);
+                        font-weight: 700;
+                        transition: color .3s;
+                        &:hover {
+                            color: var(--primary);
+                        }
+                    }
+                }
+                .delivery {
+                    display: flex;
+                    margin-bottom: 12px;
+                    .icon {
+                        margin-right: 12px;
+                    }
+                    .link {
+                        a {
+                            font-size: rem(14);
+                            text-decoration: underline;
+                            color: var(--secondary);
+                            transition: color .3s;
+                            &:hover {
+                                color: var(--primary);
+                            }
+                        }
+                    }
+                }
+                .sellerAds {
+                    a,p,span {
+                        font-size: rem(14);
+                        font-weight: 700;
+                        text-decoration: underline;
+                        transition: color .3s;
+                        &:hover {
+                            color: var(--primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.offers {
+
+    .list {
+        .item {
+
+            .imgWrap {
+                margin-bottom: 12px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .btnWrap {
+                margin-bottom: 12px;
+                .btn {
+                    min-width: initial;
+                    width: 100%;
+                }
+            }
+            .text {
+                margin-bottom: 12px;
+                p {
+                    font-size: rem(12);
+                }
+            }
+            .price {
+                p {
+                    font-size: rem(16);
+                    font-weight: 700;   
+                }
+            }
+        }
+    }
+}

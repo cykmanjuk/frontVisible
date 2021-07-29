@@ -1,0 +1,119 @@
+<% include ../includes/head %>
+<% include ../includes/mobile_menu %>
+<% include ../includes/header %>
+<% include ../includes/breadcrumbs %>
+
+<article class="catalog">
+    <div class="titleWrap">
+        <div class="title">
+            <p>Каталог</p>
+        </div>
+    </div>
+    <div class="filter">
+        <form class="form">
+            <div class="left grid12">
+                <div class="field x12">
+                    <div class="field">
+                        <input type="text" placeholder="Введите название запчасти">
+                    </div>
+                </div>
+                <div class="field x12">
+                    <select>
+                        <option data-display="Модель BMW">Модель</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="4">3</option>
+                    </select>
+                </div>
+                <div class="field x6">
+                    <select>
+                        <option data-display="Модель BMW">Год выпуска от</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="4">3</option>
+                    </select>
+                </div>
+                <div class="field x6">
+                    <select>
+                        <option data-display="Модель BMW">Год выпуска до</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="4">3</option>
+                    </select>
+                </div>
+                <div class="field x12">
+                    <select>
+                        <option data-display="Модель BMW">Тип топлива</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="4">3</option>
+                    </select>
+                </div>
+                
+            </div>
+            <div class="right">
+                <div class="title">
+                    <p>Все зап.части</p>
+                </div>
+                <% include ../includes/catalogFilter %>
+                <div class="checkbox" data-stagger>
+                    <div class="checkboxField">
+                        <input type="checkbox" id="check3" name="sogl" >
+                        <label class="checkbox__label" for="check3"></label>
+                    </div>
+                    <label class="checkboxText" for="check3">Согласен на <a href="/soglasie/" target="_blank">обработку данных</a></label>
+                </div>
+
+            </div>
+
+            <div class="extraOptions x12">
+                <div class="title">
+                    <p>Дополнительные параметры</p>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</article>
+
+
+<article class="catalogPage">
+    <div class="list grid12">
+       
+        <% include ../includes/categoryItem %>
+        <% include ../includes/categoryItem %>
+        <% include ../includes/categoryItem %>
+        <% include ../includes/categoryItem %>
+        <% include ../includes/categoryItem %>
+        <% include ../includes/categoryItem %>
+        <% include ../includes/categoryItem %>
+        <% include ../includes/categoryItem %>
+        <% include ../includes/categoryItem %>
+        <% include ../includes/categoryItem %>
+        <% include ../includes/categoryItem %>
+        <% include ../includes/categoryItem %>
+        <% include ../includes/categoryItem %>
+        <% include ../includes/categoryItem %>
+        <% include ../includes/categoryItem %>
+        <% include ../includes/categoryItem %>
+        
+    </div>
+</article>
+
+<% include ../includes/advantages %>
+
+<% include ../includes/seo2 %>
+
+<% include ../includes/footer %>
+
+
+
+</body>
+</html>
+
+
+ 
+
+
+
+

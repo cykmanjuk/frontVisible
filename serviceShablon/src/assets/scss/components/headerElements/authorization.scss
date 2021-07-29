@@ -1,0 +1,31 @@
+.authorization {
+    margin-right: 32px;
+    display: flex;
+    align-items: baseline;
+    cursor: pointer;
+    svg {
+        margin-right: 8px;
+        path {
+            fill: rgba(#fff, .0);
+            transition: fill .3s;
+        }
+    }
+    .text {
+        color: #fff;
+        font-size: rem(12);
+    }
+    &:hover {
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+    &.active {
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+}

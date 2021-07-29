@@ -1,0 +1,127 @@
+.contacts {
+
+    .inner {
+        .mapWrap {
+            position: relative;
+            padding: 50px;
+            min-height: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: stretch;
+            @media screen and (max-width: $sm) {
+                padding: 0;
+              }
+            #map {
+               height: 100%;
+               width: 100%;
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               z-index: 1;
+               @media screen and (max-width: $sm) {
+                position: static;
+                min-height: 300px;
+                max-height: 300px;
+              }
+            }
+            .contactsBlock {
+                padding: 24px;
+                background-color: #fff;
+                position: relative;
+                z-index: 5;
+                max-width: 320px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                @media screen and (max-width: $sm) {
+                    max-width: 100%;
+                    width: 100%;
+                    margin-bottom: 24px;
+                  }
+                .row {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 12px;
+                    @media screen and (max-width: $sm) {
+                        justify-content: flex-start;
+                      }
+                    .title {
+                        margin-right: 12px;
+                        p {
+                            font-size: rem(14);
+                        }
+                    }
+                    .phone {
+                        a {
+                            font-size: rem(16);
+                            font-weight: 700;
+                            transition: color .3s;
+                            &:hover {
+                                color: var(--primary);
+                            }
+                        }
+                    }
+                    .mail {
+                        a {
+                            font-size: rem(14);
+                            color: var(--primary);
+                            transition: color .3s;
+                            &:hover {
+                                color: var(--secondary);
+                            }
+                        }
+                    }
+                }
+                .adress {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-bottom: 32px;
+                    .title {
+                        margin-bottom: 8px;
+                        width: 100%;
+                        p {
+                            font-size: rem(14);
+                        }
+                    }
+                    .text  {
+                        width: 100%;
+                        margin-bottom: 8px;
+                        p{
+                            font-size: rem(14);
+                        }
+                    }
+                    .time  {
+                        width: 100%;
+                        p{
+                            font-size: rem(14);
+                        }
+                    }
+                }
+            }
+        }
+        .contactsForm {
+            .title {
+                margin-bottom: 24px;
+                p {
+                    font-size: rem(60);
+                    color: var(--primary);
+                    font-weight: 500;
+                    font-family: $secondFont;
+                }
+            }
+            .form {
+                .field {
+                    input {
+                        border-color: var(--primary);
+                    }
+                }
+                .btnWrap {
+                    .btn {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,130 @@
+// header style
+
+header.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 98;
+  @media screen and (max-width: $md) {
+    box-shadow: 1px 1px 8px 3px rgba(#000, .1);
+  }
+    .top {
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @extend .container;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      @media screen and (max-width: $xlg) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      
+      .logoWrap {
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: $lg) {
+          flex-grow: 1;
+        }
+        .logo {
+          margin-right: var(--gap);
+          svg,img {
+            max-width: 200px;
+            @media screen and (max-width: $xs) {
+              max-width: 100px;
+            }
+          }
+        }
+        .logoText {
+          max-width: calc(3*var(--column) + 2*var(--gap));
+          @media screen and (max-width: $lg) {
+            display: none;
+          }
+          p {
+            font-size: rem(16);
+            font-weight: 700;
+          }
+        }
+      } 
+  
+      .location {
+        display: flex;
+        margin-right: var(--indentB2);
+        max-width: calc(3*var(--column) + var(--gap));
+        @media screen and (max-width: $lg) {
+          max-width: calc(5*var(--column) + var(--gap));
+        }
+        @media screen and (max-width: $md) {
+         display: none;
+        }
+        .icon {
+          margin-right: 12px;
+          svg {
+            path {
+              fill: var(--primary);
+          }
+          }
+        }
+        .text {
+          p {
+            color: var(--textGray);
+            font-size: rem(16);
+          }
+        }
+      }
+      .btnWrap {
+        @media screen and (max-width: $md) {
+          margin-right: var(--indentB2);
+        }
+        @media screen and (max-width: $sm) {
+          display: none;
+        }
+        .btn{
+          height: 44px;
+        }
+      }
+      @import "components/headerElements/burger"; 
+      @import "components/headerElements/phones"; 
+    }
+    .bottom {
+      @extend .container;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      background-color: var(--primary);
+      display: flex;
+      justify-content: space-between;
+      @import "components/headerElements/dropDownMenu"; 
+      @media screen and (max-width: $md) {
+        display: none;
+      }
+      .searckBtn {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px;
+        border-radius: 4px;
+        @extend %hover1;
+        svg {
+          path {
+            transition: fill .3s;
+          }
+        }
+        &:hover {
+          background-color: #fff;
+          svg {
+            path {
+              fill: var(--primary);
+            }
+          }
+        }
+      }
+
+    }
+    .elements {
+      display: flex;
+      align-items: center;
+    }
+}

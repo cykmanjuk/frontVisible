@@ -1,0 +1,9 @@
+.searchForm {
+    @extend %start;
+    align-items: stretch;
+    border: 1px solid var(--gray);
+    .searchButton {
+        padding: 0 10px;
+        @extend %center;
+    }
+}

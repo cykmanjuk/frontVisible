@@ -1,0 +1,114 @@
+.aboutPage {
+    .inner {
+        .content {
+            .text {
+                p {
+                    font-size: rem(16);
+                    font-weight: 400;
+                    margin-bottom: 12px;
+                }
+            }
+        }
+        .aboutBlock {
+         
+            .sticky {
+                background-color: #F2F6F9;
+                padding: 16px;
+                border-radius: 4px;
+                position: sticky;
+                top: 170px;
+            }
+            .text {
+                p {
+                    font-size: rem(16);
+                    font-weight: 700;
+                }
+            }
+            .imgWrap {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+.ourTeam {
+    .sliderTop {
+        margin-bottom: var(--indentB2);
+        .text {
+            p {
+                font-size: rem(18);
+                font-weight: 300;
+            }
+        }
+    }
+    .list {
+        margin-bottom: var(--indentB2);
+        .item {
+            background-color: #fff;
+            .imgWrap {
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                img {
+                    position: relative;
+                    z-index: 1;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                .socialList {
+                    position: absolute;
+                    z-index: 2;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    bottom: 12px;
+                    right: 12px;
+                }
+            }
+            .content {
+                padding: calc(var(--indentB2)/2);
+                .title {
+                    margin-bottom: 12px;
+                    p {
+                        font-size: rem(17);
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
+                }
+                .subTitle {
+                    margin-bottom: 6px;
+                    p {
+                        font-size: rem(14);
+                        font-weight: 700;
+                    }
+                }
+                .text {
+                    margin-bottom: 6px;
+                    p {
+                        font-size: rem(14);
+                        font-weight: 300;
+                    }
+                }
+                .link {
+                    line-height: 1;
+                    a {
+                        font-size: rem(14);
+                        font-weight: 700;
+                        transition: color .3s;
+                        &:hover {
+                            color: var(--primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sliderWrap {
+        .list {
+           margin-bottom: 0;
+        }
+    }
+
+}

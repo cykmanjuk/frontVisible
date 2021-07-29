@@ -1,0 +1,46 @@
+// header style
+
+header.header {
+    .logo {
+      margin-right: 3vw;
+    }
+    .top {
+      @extend %between;
+      align-items: baseline;
+      @extend .container;
+      background-color: #F1F5F9;
+      @import "components/headerElements/topMenu"; 
+      @import "components/headerElements/phones"; 
+      @import "components/headerElements/callBack";
+      @import "components/headerElements/authorization";
+    }
+    .middle {
+      @extend .container;
+      @extend %between;
+      align-items: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      @import "components/headerElements/dropDownMenu"; 
+      @import "components/headerElements/searchForm"; 
+      @import "components/headerElements/comparison"; 
+      @import "components/headerElements/like"; 
+      @import "components/headerElements/cart"; 
+      @import "components/headerElements/burger"; 
+      .logoWrap {
+        @media screen and (max-width: $sm) {
+          flex-grow: 1;
+        }
+      }
+      .mobileSearchBtn {
+        display: none;
+        margin-right: 24px;
+        @media screen and (max-width: $sm) {
+          display: block;
+        }
+      }
+    }
+    .elements {
+      display: flex;
+      align-items: center;
+    }
+}

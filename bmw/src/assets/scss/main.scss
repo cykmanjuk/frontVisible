@@ -1,0 +1,186 @@
+@import "utils/libs";
+@import "base/reset";
+@import "base/vars";
+@import "utils/grid";
+@import "utils/mixins";
+@import "utils/animate";
+@import "utils/counter";
+@import "utils/buttons";
+@import "utils/titles";
+@import "utils/select";
+@import "components/forms";
+@import "components/mobile_menu";
+@import "components/header";
+@import "components/footer";
+@import "components/breadcrumbs";
+@import "components/modals";
+@import "pages/catalog";
+@import "pages/personalArea";
+@import "pages/cartPage";
+@import "pages/checkOut";
+@import "pages/comparison";
+@import "components/pagination";
+@import "components/tabs";
+@import "components/socials";
+
+@import "components/accordion";
+@import "pages/mainPage";
+@import "pages/card";
+@import "pages/contentPages";
+@import "pages/catalog";
+
+
+
+
+
+*, *:before , *:after {
+	box-sizing: border-box;
+}
+
+html {
+  line-height: $mainLineHeight;
+	font-size: $mainFontSize;
+	color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $lg) {
+		font-size: 18px;
+  }
+  @media screen and (max-width: $md) {
+		font-size: 16px;
+  }
+
+}
+
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+	font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.siteBody {
+  min-height: 61vh;
+}
+
+
+section, article {
+  position: relative;
+  @extend .container;
+  margin-bottom: 60px;
+}
+
+table {
+  width: 100%;
+  tr {
+    border-bottom: 1px solid #D4DAE0;
+    td {
+      font-size: rem(14);
+      padding: 4px;
+    }
+  }
+}
+
+
+
+.textLine {
+  height: 4px;
+  width: 200px;
+  border-radius: 3px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 5;
+  &.white {
+    background-color: #fff;
+  }
+  &.blue {
+    background-color: var(--primary);
+  }
+}
+
+
+.sliderWrap {
+  position: relative;
+  @media screen and (max-width: $xlg) {
+    padding-left: 50px;
+    padding-right: 60px;
+  }
+  @media screen and (max-width: $sm) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .sliderArrows {
+      position: absolute;
+      width: calc(100% + 150px);
+      left: -75px;
+      top: calc(50% - 21px);
+      height: 0;
+      display: flex;
+      justify-content: space-between;
+      @media screen and (max-width: $xlg) {
+        width: 100%;
+        left: 0;
+      }
+      @media screen and (max-width: $sm) {
+       position: static;
+       margin-top: 16px;
+       justify-content: center;
+       height: initial;
+      }
+      .btnArrow {
+          min-width: 42px;
+          min-height: 42px;
+          max-width: 42px;
+          max-height: 42px;
+          border: 1px solid #D4DAE0;
+          border-radius: 2px;
+          cursor: pointer;
+          position: relative;
+          @extend %fill;
+          .arrow {
+              position: absolute;
+              z-index: 5;
+              top: 50%;
+              left: 50%;
+              width: 20px;
+              height: 20px;
+              border-top: 2px solid var(--secondary);
+              border-right: 2px solid var(--secondary);
+              transition: border-color .3s;
+          }
+          &.left {
+            @media screen and (max-width: $sm) {
+              margin-right: 16px;
+              margin-left: 0;
+            }
+              .arrow {
+                  transform: translate(-30%, -50%) rotate(-135deg)
+              }
+          }
+          &.right {
+            @media screen and (max-width: $sm) {
+              margin-left: 16px;
+            }
+              .arrow {
+                  transform: translate(-70%, -50%) rotate(45deg)
+              }
+          }
+          &:hover {
+              .arrow {
+                  border-color: #fff;
+              }
+          }
+      }
+  }
+}
+
+
+
+// .animateImg.first {
+//   animation: swimmingUp 7s infinite ease-in-out;
+// }
+// .animateImg.second {
+//   animation: swimmingDown 7s infinite ease-in-out;
+// }

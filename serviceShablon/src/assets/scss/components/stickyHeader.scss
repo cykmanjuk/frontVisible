@@ -1,0 +1,61 @@
+.stickyHeader {
+    @extend .container;
+    border-bottom: 1px solid rgba(134, 132, 130, 0.2);
+    position: fixed;
+    top: -100%;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+    height: 50px;
+
+    
+    &.active {
+        top: 0;
+    }
+    .logoWrap {
+        margin-right: 24px;
+        flex-grow: 1;
+      
+        .logo {
+            display: block;
+            min-width: 150px;
+            max-width: 150px;
+            @media screen and (max-width: $sm) {
+                min-width: 100px;
+                max-width: 100px;
+             }
+            svg {
+                width: 100%;
+                object-fit: contain;
+            }
+            @media screen and (max-width: $md) {
+               max-width: 100px;
+            }
+        }
+    }
+    @import "components/headerElements/dropDownMenu"; 
+    @import "components/headerElements/phones"; 
+    @import "components/headerElements/cart"; 
+    @import "components/headerElements/burder"; 
+    .btn {
+        margin-right: 24px;
+        @media screen and (max-width: $sm) {
+            display: none;
+        }
+    }
+    .elements {
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: $lg) {
+            margin-right: 24px;
+          }
+          @media screen and (max-width: $xxs) {
+            margin-right: 12px;
+          }
+      }
+
+}

@@ -1,0 +1,11 @@
+.callBack {
+    color: #fff;
+    opacity: .7;
+    font-size: rem(12);
+    transition: opacity .3s;
+    margin-right: 32px;
+    @extend %underlineWhite;
+    &:hover {
+        opacity: 1;
+    }
+}

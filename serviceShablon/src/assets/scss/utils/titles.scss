@@ -1,0 +1,51 @@
+h1 {
+    text-transform: uppercase;
+    font-size: rem(26);
+    font-weight: 700;
+    color: var(--titleColor);
+    margin-bottom: calc(var(--indentB2)/2);
+    @media screen and (max-width: $sm) {
+        font-size: rem(22);
+      }
+}
+h2 {
+    text-transform: uppercase;
+    font-size: rem(24);
+    font-weight: 700;
+    color: var(--titleColor);
+    margin-bottom: calc(var(--indentB2)/2);
+}
+h3 {
+    text-transform: uppercase;
+    font-size: rem(22);
+    font-weight: 700;
+    color: var(--titleColor);
+    margin-bottom: calc(var(--indentB2)/2);
+}
+
+.titleWrap {
+    margin-bottom: calc(var(--indentB)/2);
+    position: relative;
+    z-index: 5;
+    h1,h2,h3 {
+        margin-bottom: 0;
+    }
+    .subTitle {
+        margin-bottom: 12px;
+        p {
+            font-size: rem(14);
+            color: var(--primary);
+            font-weight: 300;
+        }
+    }
+    .title {
+        p {
+            text-transform: uppercase;
+            font-size: rem(20);
+            font-weight: 700;
+            @media screen and (max-width: $sm) {
+                font-size: rem(16);
+              }
+        }
+    }
+}

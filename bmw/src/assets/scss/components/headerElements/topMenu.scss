@@ -1,0 +1,19 @@
+.topMenu {
+    flex-grow: 1;
+    @media screen and (max-width: $lg) {
+        display: none;
+    }
+   .list {
+      display: flex;
+      justify-content: flex-start;
+      .item {
+          margin-right: 2vw;
+          @extend %fill;
+          .link {
+              color: var(--gray);
+              font-size: rem(14);
+              padding: 6px 12px 8px;
+          }
+      }
+   }
+}

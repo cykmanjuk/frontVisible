@@ -1,0 +1,58 @@
+.cart {
+    display: flex;
+    align-items: center;
+    svg {
+        margin-right: 12px;
+        margin-top: 4px;
+        path {
+            fill: var(--secondary);           
+        }
+    }
+    .cartText {
+        @media screen and (max-width: $sm) {
+           display: none;
+         }
+        .quantity {
+            font-size: rem(12);
+            color: var(--gray);
+            line-height: 1.2; 
+            transition: color .3s;
+            font-weight: 300;
+        }
+        .summ {
+        line-height: 0;
+            p {
+                font-weight: 700;
+                font-size: rem(12);
+                font-weight: 700;
+                line-height: 1.2;
+                color: #000;
+                @extend %underlineColor;
+            }
+        }
+    }
+
+    &:hover {
+
+        svg {
+            path {
+               
+            }
+        }
+    }
+    &:hover {
+
+        .cartText {
+            .quantity {
+                color: #000;
+            }
+            .summ {
+                p {
+                    &:before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

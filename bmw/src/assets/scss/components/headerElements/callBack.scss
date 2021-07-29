@@ -1,0 +1,10 @@
+.callBack {
+    @media screen and (max-width: $md) {
+        display: none;
+    }
+    font-size: rem(14);
+    font-weight: 700;
+    @extend %fill;
+    padding: 6px 12px 8px;
+    cursor: pointer;
+}

@@ -1,0 +1,31 @@
+.searchForm {
+    flex-grow: 2;
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid var(--gray);
+    margin-right: 2vw;
+    font-size: rem(14);
+    @media screen and (max-width: $sm) {
+        display: none;
+    }
+    .searchButton {
+        width: 32px;
+        height: 32px;
+        @extend %center;
+        border: 1px solid#fff;
+        transition: .3s;
+        svg {
+            path {
+                transition: .3s;
+            }
+        }
+        &:hover {
+            border-color: var(--primary);
+            svg {
+                path {
+                    fill: var(--primary);
+                }
+            }
+        }
+    }
+}

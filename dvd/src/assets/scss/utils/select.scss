@@ -1,0 +1,54 @@
+.select {
+    position: relative;
+    border: 1px solid var(--border);
+    padding-left: 10px;
+    padding-right: 15px;
+    transition: .3s;
+    cursor: pointer;
+    overflow: hidden;
+    &:before {
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        transform: rotate(45deg);
+        width: 8px;
+        height: 8px;
+        border-right: 1px solid rgba(#000, .5);
+        border-bottom: 1px solid rgba(#000, .5);
+        transition: transform, border-color .3s;
+    }
+    .selectTitle {
+        white-space: nowrap;
+    }
+    .selectList {
+        padding: 8px;
+        border: 1px solid var(--border);
+        background-color: #fff;
+        position: static;
+        top: 30px;
+        left: 0;
+        z-index: 10;
+        min-width: 100%;
+        .selectItem {
+
+            .selectText {
+
+            }
+        }
+    }
+    &:hover {
+        border-color: #000;
+        &:before {
+            border-color: rgba(#000, 1);
+        }
+    }
+    &.active {
+        &:before {
+            transform: rotate(-135deg);
+        }
+    }
+    &.is-collapsed {
+        height: 0;
+    }
+}

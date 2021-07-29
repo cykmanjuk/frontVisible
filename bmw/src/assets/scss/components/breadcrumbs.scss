@@ -1,0 +1,39 @@
+.breadcrumbs {
+    margin-bottom: 24px;
+    overflow: hidden;
+    @media screen and (max-width: $md) {
+       margin-bottom: 12px;
+     }
+    .list {
+        @extend %start;
+        @media screen and (max-width: $md) {
+            overflow-x: scroll;
+            padding-bottom: 12px;
+      }
+        .item {
+            margin-right: 32px;
+            position: relative;
+            .link {
+                @extend %underlineBlack;
+                font-size: rem(14);
+                font-weight: 400;
+                color: #565B66;
+            }
+            .icon {
+                position: absolute;
+                bottom: 3px;
+                right: -18px;
+            }
+            &:last-child {
+                pointer-events: none;
+                opacity: .5;
+                .link {
+                    pointer-events: none;
+                }
+                .icon {
+                    display: none;
+                }
+            }
+        }
+    }
+}

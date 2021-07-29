@@ -1,0 +1,15 @@
+.catalog {
+
+    .list {
+
+        .item {
+            position: relative;
+            transition: box-shadow .3s;
+            padding: 20px;
+            @import "components/card_inner";
+            &:hover {
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}

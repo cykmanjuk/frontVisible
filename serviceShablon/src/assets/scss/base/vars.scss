@@ -1,0 +1,48 @@
+// Font
+$mainFont                : 'circe', sans-serif;
+
+// Size
+$mainFontSize            : 20px;
+$mainFontWeight          : 400;
+$mainLineHeight          : 1.2;
+
+$xlg                     : 1500px;
+$lg                      : 1280px;
+$md                      : 980px;
+$sm                      : 750px;
+$xs                      : 500px;
+$xxs                     : 340px;
+
+
+
+.container {
+  padding: 0 calc(50% - var(--halfContainer));
+  @media screen and (max-width: $xlg) {
+    padding: 0 30px;
+  }
+  @media screen and (max-width: $md) {
+    padding: 0 20px;
+  }
+  @media screen and (max-width: $sm) {
+    padding: 0 15px;
+  }
+  @media screen and (max-width: $xs) {
+    padding: 0 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+

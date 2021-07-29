@@ -1,0 +1,52 @@
+.cart {
+    display: flex;
+    align-items: flex-end;
+    svg {
+        margin-right: 8px;
+        path {
+           
+        }
+    }
+    .cartText {
+        .quantity {
+            font-size: rem(12);
+            color: rgba(#000, .4);
+            line-height: 1.2; 
+            transition: color .3s;
+        }
+        .summ {
+        line-height: 0;
+            p {
+                font-weight: 700;
+                font-size: rem(12);
+                line-height: 1.2;
+                color: #000;
+                @extend %underlineBlack;
+            }
+        }
+    }
+
+    &:hover {
+
+        svg {
+            path {
+               
+            }
+        }
+    }
+    &:hover {
+
+        .cartText {
+            .quantity {
+                color: #000;
+            }
+            .summ {
+                p {
+                    &:before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

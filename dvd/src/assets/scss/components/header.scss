@@ -1,0 +1,81 @@
+// header style
+
+header.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+    .logoWrap {
+      @media screen and (max-width: 1420px) {
+        flex-grow: 1;
+      }
+      .logo {
+        margin-right: 18px;
+        img {
+          @media screen and (max-width: $sm) {
+            max-width: 150px;
+          }
+        }
+      }
+    }
+    .top {
+      @extend .container;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #201B19;
+      @import "components/headerElements/callBack";
+      .adress {
+        margin-right: 2vw;
+        @media screen and (max-width: $sm) {
+          display: none;
+        }
+        p {
+          font-size: rem(14);
+          color: #fff;
+        }
+      }
+      .workTime {
+        margin-right: 2vw;
+        @media screen and (max-width: $sm) {
+          display: none;
+        }
+        p {
+          font-size: rem(14);
+          color: #fff;
+        }
+      }
+      .socialList {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-start;
+      }
+      .mail {
+        color: var(--primary);
+        font-size: rem(12);
+        font-weight: 700;
+        transition: opacity .3s;
+        margin-right: 0px;
+        transition: opacity .3s;
+        &:hover {
+            opacity: .7;
+        }
+    }
+    }
+    .bottom {
+      background-color: #fff;
+      @extend .container;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @import "components/headerElements/dropDownMenu"; 
+      @import "components/headerElements/phones"; 
+      @import "components/headerElements/burder"; 
+    }
+    .dropDownMenu {
+      @media screen and (max-width: 1420px) {
+        display: none;
+      }
+    }
+}

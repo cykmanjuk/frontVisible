@@ -1,0 +1,63 @@
+// Font
+$mainFont                : 'dinPro', sans-serif;
+$secondFont              : 'dinProCon', sans-serif;
+
+// Size
+$mainFontColor           : #171B22;
+$mainFontSize            : 20px;
+$mainFontWeight          : 400;
+$mainLineHeight          : 1.4;
+
+$xlg                     : 1500px;
+$lg                      : 1280px;
+$md                      : 980px;
+$sm                      : 750px;
+$xs                      : 500px;
+$xxs                     : 340px;
+
+
+:root {
+    --primary            : #155DD5;
+    --secondary          : #002A70;
+    --text               : #000;
+    --textGray           : rgba(0,0,0,.5);
+    --cross              : #fc5c65;
+    --link               : #545454;
+    --border             : rgba(0,0,0, .1);
+    --gray               : #565B66;
+    --red                : #f60000;
+    --green              : #42c102;
+}
+
+
+.container {
+    padding: 0 calc(50% - 750px);
+    @media screen and (max-width: $xlg) {
+      padding: 0 30px;
+    }
+    @media screen and (max-width: $md) {
+      padding: 0 20px;
+    }
+    @media screen and (max-width: $sm) {
+      padding: 0 15px;
+    }
+    @media screen and (max-width: $xs) {
+      padding: 0 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+

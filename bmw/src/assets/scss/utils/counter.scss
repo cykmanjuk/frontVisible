@@ -1,0 +1,96 @@
+.counter {
+    min-height: 40px;
+    @extend %between;
+    align-items: stretch;
+    border: 1px solid#D4DAE0;
+    border-radius: 3px;
+    .counterBtn {
+        position: relative;
+        cursor: pointer;
+        width: 40px;
+        @extend %center;
+        .line {
+           overflow: hidden;
+            transform: translate(-50%, -50%);
+            background-color: #000;
+            &.l1 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 8px;
+                height: 1px;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0%;
+                    left: -11px;
+                    width: 11px;
+                    height: 1px;
+                    background-color: var(--text);
+                    transition: left .3s;
+                }
+            }
+            &.l2 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 1px;
+                height: 8px;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 11px;
+                    left: 0%;
+                    width: 1px;
+                    height: 11px;
+                    background-color: var(--text);
+                    transition: top .3s;
+                }
+            }
+        }
+        &:hover {
+            .line {
+                &.l1 {
+                    &:before {
+                        left: 0;
+                    }
+                }
+                &.l2 {
+                    &:before {
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+    .verticalBtns {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border-left: 1px solid #D4DAE0;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            height: 1px;
+            transform: translateX(-50%);
+            background-color: #D4DAE0;
+        }
+        .counterBtn {
+            height: 50%;
+        }
+    }
+    .counterInput {
+        @extend %center;
+        input {
+            height: 100%;
+            font-size: rem(14);
+            text-align: center;
+            @media screen and (max-width: $sm) {
+                max-width: 30px;
+          }
+        }
+    }
+}

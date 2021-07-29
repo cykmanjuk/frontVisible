@@ -1,0 +1,79 @@
+.paggination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: var(--indentB2);
+    .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 50px;
+        cursor: pointer;
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: var(--primary);
+          transition: opacity .3s;
+          z-index: 1;
+        }
+        &.left {
+          &:before {
+            border-radius: 4px 0 0 4px;
+            opacity: .3;
+          }
+        }
+        &.right {
+          &:before {
+            border-radius: 0 4px 4px 0;
+          }
+        }
+        svg {
+          position: relative;
+          z-index: 5;
+          path {
+            fill: #fff;
+          }
+        }
+        &:hover {
+          &:before {
+            opacity: .7;
+          }
+        }
+      }
+    .pagList {
+        @extend %center;
+        margin-bottom: 0;
+        .pagItem {
+            margin-right: 20px;
+            box-shadow: none;
+            @extend %center;
+            width: 30px;
+            height: 30px;
+            margin-bottom: 0!important;
+            .text {
+                font-size: rem(18);
+                font-weight: 700;
+                margin-bottom: 0!important;
+                &:before {
+                    width: 100%;
+                }
+            }
+            &:hover {
+                .text {
+                    color: var(--primary); 
+                }
+            }
+            &.active {
+                .text {
+                   color: var(--primary);
+                }
+            }
+        }
+    }
+}

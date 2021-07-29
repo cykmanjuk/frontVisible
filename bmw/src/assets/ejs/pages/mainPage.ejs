@@ -1,0 +1,266 @@
+<% include ../includes/head %>
+<% include ../includes/mobile_menu %>
+<% include ../includes/header %>
+
+
+
+<article class="mainScreen">
+    <div class="msBg">
+        <img src="assets/img/msImg.png" alt="">
+    </div>
+    <div class="content grid12">
+        <div class="left x9 lg8 md7 sm6 xs12">
+            <div class="textLine white"></div>
+            <div class="title">
+                <p>большой Каталог<br>оригинальных запчастей</p>
+            </div>
+            <div class="text">
+                <p>Ежедневное обновление  товаров</p>
+            </div>
+        </div>
+        <div class="right x3 lg4 md5 sm6 xs12">
+            <div class="title">
+                <p>Быстрый поиск</p>
+            </div>
+            <form class="form">
+				<div class="field">
+                    <select>
+                        <option data-display="Модель BMW">Модель BMW</option>
+                        <option value="1">Some option</option>
+                        <option value="2">Another option</option>
+                        <option value="4">Potato</option>
+                    </select>
+				</div>
+	
+                <div class="field">
+                    <select>
+                        <option data-display="Модификация">Модификация</option>
+                        <option value="1">Some option</option>
+                        <option value="2">Another option</option>
+                        <option value="4">Potato</option>
+                    </select>
+				</div>
+	
+				<div class="checkbox white" data-stagger>
+					<div class="checkboxField">
+						<input type="checkbox" id="check3" name="sogl" >
+						<label class="checkbox__label" for="check3"></label>
+					</div>
+					<label class="checkboxText" for="check3">Согласен на <a href="/soglasie/" target="_blank">обработку данных</a></label>
+				</div>
+	
+
+				<div class="btnWrap">
+					<button class="btn white"><span>Подобрать</span></button>
+				</div>
+	
+			</form>
+        </div>
+    </div>
+</article>
+
+
+<article class="selection">
+    <div class="textLine blue"></div>
+    <div class="titleWrap">
+        <div class="title">
+            <p>Подбор Запчастей по модели</p>
+        </div>
+    </div>
+    <div class="top grid12">
+        <div class="block x3 md4 xs12">
+            <select>
+                <option data-display="Модель BMW">Модель BMW</option>
+                <option value="1">Some option</option>
+                <option value="2">Another option</option>
+                <option value="4">Potato</option>
+            </select>
+        </div>
+        <div class="block x2 md4 xs6">
+            <select>
+                <option data-display="Год">Год</option>
+                <option value="1">Some option</option>
+                <option value="2">Another option</option>
+                <option value="4">Potato</option>
+            </select>
+        </div>
+        <div class="block x2 md4 xs6">
+            <select>
+                <option data-display="Тип двигателя">Тип двигателя</option>
+                <option value="1">Some option</option>
+                <option value="2">Another option</option>
+                <option value="4">Potato</option>
+            </select>
+        </div>
+        <div class="block x2 md6">
+            <select>
+                <option data-display="Объем двигателя">Объем двигателя</option>
+                <option value="1">Some option</option>
+                <option value="2">Another option</option>
+                <option value="4">Potato</option>
+            </select>
+        </div>
+        <div class="block x2 md6">
+            <select>
+                <option data-display="Мощность">Мощность</option>
+                <option value="1">Some option</option>
+                <option value="2">Another option</option>
+                <option value="4">Potato</option>
+            </select>
+        </div>
+    </div> 
+
+    <div class="sliderWrap">
+        <div class="list grid12">
+            <div class="item x3">
+                <% include ../includes/cardInSlider %>   
+                <% include ../includes/cardInSlider %>   
+            </div>
+
+            <div class="item x3">
+                <% include ../includes/cardInSlider %>   
+                <% include ../includes/cardInSlider %>   
+            </div>
+            <div class="item x3">
+                <% include ../includes/cardInSlider %>   
+                <% include ../includes/cardInSlider %>   
+            </div>
+            <div class="item x3">
+                <% include ../includes/cardInSlider %>   
+                <% include ../includes/cardInSlider %>   
+            </div>
+            <div class="item x3">
+                <% include ../includes/cardInSlider %>   
+                <% include ../includes/cardInSlider %>   
+            </div>
+            <div class="item x3">
+                <% include ../includes/cardInSlider %>   
+                <% include ../includes/cardInSlider %>   
+            </div>
+            <div class="item x3">
+                <% include ../includes/cardInSlider %>   
+                <% include ../includes/cardInSlider %>   
+            </div>
+        </div>
+        <div class="sliderArrows">
+            <div class="btnArrow left RtoL">
+                <div class="arrow"></div>
+            </div>
+            <div class="btnArrow right LtoR">
+                <div class="arrow"></div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+<article class="category">
+    <div class="textLine blue"></div>
+    <div class="titleWrap">
+        <div class="title">
+            <p>Каталог Запчастей</p>
+        </div>
+        <div class="btnMore">
+            <div class="text RtoL">
+                <p>Общий каталог</p>
+            </div>
+            <div class="icon"></div>
+        </div>
+    </div>
+    <div class="sliderWrap">
+        <div class="list grid12">
+            <a href="#" class="item x2">
+                <div class="imgWrap">
+                    <img src="assets/img/categoryImg1.png" alt="">
+                </div>
+                <div class="title">
+                    <p>Сцепление</p>
+                </div>
+            </a>
+
+            <a href="#" class="item x2">
+                <div class="imgWrap">
+                    <img src="assets/img/categoryImg2.png" alt="">
+                </div>
+                <div class="title">
+                    <p>Детали двигателя</p>
+                </div>
+            </a>
+
+            <a href="#" class="item x2">
+                <div class="imgWrap">
+                    <img src="assets/img/categoryImg3.png" alt="">
+                </div>
+                <div class="title">
+                    <p>Подвеска</p>
+                </div>
+            </a>
+
+            <a href="#" class="item x2">
+                <div class="imgWrap">
+                    <img src="assets/img/categoryImg4.png" alt="">
+                </div>
+                <div class="title">
+                    <p>Лампы</p>
+                </div>
+            </a>
+
+            <a href="#" class="item x2">
+                <div class="imgWrap">
+                    <img src="assets/img/categoryImg5.png" alt="">
+                </div>
+                <div class="title">
+                    <p>Рулевое управление</p>
+                </div>
+            </a>
+
+            <a href="#" class="item x2">
+                <div class="imgWrap">
+                    <img src="assets/img/categoryImg6.png" alt="">
+                </div>
+                <div class="title">
+                    <p>Тормозная система</p>
+                </div>
+            </a>
+
+            <a href="#" class="item x2">
+                <div class="imgWrap">
+                    <img src="assets/img/categoryImg1.png" alt="">
+                </div>
+                <div class="title">
+                    <p>Сцепление</p>
+                </div>
+            </a>
+        </div>
+        <div class="sliderArrows">
+            <div class="btnArrow left RtoL">
+                <div class="arrow"></div>
+            </div>
+            <div class="btnArrow right LtoR">
+                <div class="arrow"></div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+<% include ../includes/advantages %>
+
+<% include ../includes/news %>
+<% include ../includes/seo %>
+
+<% include ../includes/footer %>
+
+
+
+</body>
+</html>
+
+
+ 
+
+
+
+

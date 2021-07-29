@@ -1,0 +1,49 @@
+.phones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (max-width: $sm) {
+        display: none;
+      }
+    .list {
+        display: flex;
+        .item {
+            .link {
+                display: flex;
+                align-items: baseline;
+                @extend %underlineWhite;
+                svg,img {
+                    margin-right: 8px
+                }
+                span {
+                    font-size: rem(24);
+                    font-weight: 600;
+                    transition: color .3s;
+                }
+                &:hover {
+                    span{ 
+                        color: var(--primary);    
+                    }
+                }
+            }
+        }
+    }
+    .callBack {
+        font-size: rem(22);
+        color: #fff;
+        font-weight: 400;
+        font-weight: 400;
+        background: #48322A;
+        font-family: $secondFont;
+        height: 40px;
+        width: 100%;
+        padding: 4px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color .3s;
+        &:hover {
+            background-color: var(--primary);
+        }
+    }
+}

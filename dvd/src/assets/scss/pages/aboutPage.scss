@@ -1,0 +1,148 @@
+.aboutPage {
+    .inner {
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .text {
+                margin-bottom: 24px;
+                p {
+                    font-size: rem(14);
+                    margin-bottom: 8px;
+                }
+            }
+            .block {
+                background-color: var(--secondary);
+                padding: 32px 48px;
+                p {
+                    font-size: rem(24);
+                    color: #fff;
+                }
+            }
+        }
+        .imgWrap {
+            padding-left: calc(var(--column) + var(--gap));
+            @media screen and (max-width: $lg) {
+                padding: 0;
+              }
+            .imgBlock {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 26px;
+                    left: 26px;
+                    width: calc(100% - 52px);
+                    height: calc(100% - 52px);
+                    z-index: 5;
+                    pointer-events: none;
+                    border: 1px solid var(--quaternary);
+                }
+                
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            }
+
+        }
+    }
+}
+
+
+.aboutAdwantages {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    .innerAdwantages {
+        background-color: #F5F3EF;
+        padding-top: 60px;
+        padding-bottom: 32px;
+        @media screen and (max-width: $xlg) {
+            padding-left: 30px;
+          }
+          @media screen and (max-width: $md) {
+           width: 100%;
+           padding-left: 0;
+           margin-bottom: 24px;
+          }
+        .list {
+            width: calc(100% - (var(--column) + var(--gap)));
+            @media screen and (max-width: $xlg) {
+                width: 100%;
+                padding-right: 24px;
+              }
+              @media screen and (max-width: $md) {
+                padding: 0 20px;
+              }
+              @media screen and (max-width: $sm) {
+                padding: 0 15px;
+              }
+              @media screen and (max-width: $xs) {
+                padding: 0 10px;
+              }
+            .item{
+                .icon {
+                    background-color: var(--primary);
+                    width: 80px;
+                    height: 80px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 12px;
+                }
+                .text, .title {
+                    p {
+                        font-size: rem(14);
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+    .sertificates {
+        padding-top: 60px;
+        padding-bottom: 32px;
+        @media screen and (max-width: $md) {
+            width: 100%;
+            padding-right: 20px;
+           }
+          @media screen and (max-width: $sm) {
+            padding: 0 15px;
+          }
+          @media screen and (max-width: $xs) {
+            padding: 0 10px;
+          }
+        .text {
+            margin-bottom: 24px;
+            p {
+                font-size: rem(14);
+            }
+        }
+        .sertList {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(1, auto);
+            grid-gap: var(--gap);
+            .item {
+               .imgWrap {
+                   margin-bottom: 12px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+               }
+               .title {
+                   p {
+                       font-size: rem(11);
+                   }
+               }
+            }
+        }
+    }
+}

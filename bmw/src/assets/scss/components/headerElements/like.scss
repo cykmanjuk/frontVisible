@@ -1,0 +1,36 @@
+.like {
+    position: relative;
+    margin-right: 24px;
+    svg {
+        path {
+            transition: fill .3s;
+            fill: rgba(255,255,255,0);
+        }
+
+    }
+    .quantity {
+        position: absolute;
+        top: 0;
+        right: -5px;
+        font-size: rem(11);
+        line-height: 1;
+        font-weight: 700;
+        color: var(--secondary);
+    }
+    &:hover {
+        svg {
+            path {
+                fill: var(--primary);
+
+            }
+        }
+    }
+    &.active {
+        svg {
+            path {
+                fill: var(--primary);
+
+            }
+        }
+    }
+}

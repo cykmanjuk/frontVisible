@@ -1,0 +1,259 @@
+.cartPage {
+    padding-top: 50px;
+    .titleWrap {
+        width: 100%;
+    }
+    .form {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .left {
+            width: 75%;
+            margin-right: 24px;
+            @media screen and (max-width: $md) {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+        .right {
+            width: calc(25% - 24px);
+            padding-top: 50px;
+            @media screen and (max-width: $md) {
+                width: 100%;
+            }
+            .btnWrap {
+                position: sticky;
+                top: 100px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                .btn {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+    .header {
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #D4DAE0;
+        @media screen and (max-width: $md) {
+            display: none;
+        }
+        .title {
+
+            p {
+                font-size: rem(12);
+                color: #000;
+                opacity: .5;
+            }
+        }
+    }
+    .product {
+        position: relative;
+        margin-bottom: 32px;
+        @media screen and (max-width: $lg) {
+            grid-gap: 24px 8px;
+        }
+        @media screen and (max-width: $md) {
+            grid-gap: 24px 8px;
+        }
+        .cancel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(#fff, .8);
+            @extend %center;
+            z-index: 10;
+            display: none;
+            .text {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                p {
+                    font-size: rem(20);
+                    margin-right: 12px;
+                }
+                a {
+                    font-size: rem(20);
+                    font-weight: 700;
+                    color: var(--red);
+                }
+            }
+            &.active {
+                display: flex;
+            }
+        }
+        .block {
+            display: flex;
+            align-items: center;
+            position: relative;
+            &:before {
+                content: attr(data-title);
+                position: absolute;
+                top: -18px;
+                left: 0px;
+                font-size: rem(12);
+                color: rgba(#000, .5);
+                display: none;
+                @media screen and (max-width: $md) {
+                    display: block;
+                }
+            }
+            .imgWrap {
+                margin-right: 0;
+                @media screen and (max-width: $md){
+                    margin-right: 33%;
+                }
+                @media screen and (max-width: $xs){
+                    margin-right: 0;
+                }
+                img {
+                    width: 100%;
+                    max-width: 100%;
+                    object-fit: contain;
+                }
+            }
+            .title {
+
+                p {
+                    font-size: rem(12);
+                    line-height: 1.2;
+                    color: #000;
+                    b {
+                        font-size: rem(16);
+                    }
+                    @media screen and (max-width: $md) {
+                        font-size: rem(14);
+                    }
+                }
+            }
+            .counter {
+                width: 60%;
+                @media screen and (max-width: $lg) {
+                    width: 100%;
+                }
+            }
+           
+            &.action {
+                order: 5;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @media screen and (max-width: $md) {
+                    order: initial;
+                }
+                .actionBtn {
+                    cursor: pointer;
+                    svg {
+                        path {
+                            transition: stroke .3s;
+                        }
+                    }
+                    &:hover {
+                        svg {
+                            path {
+                                stroke: var(--primary);
+                            }
+                        }
+                    }
+                }
+            }
+            &.end {
+                @media screen and (max-width: $md) {
+                    justify-content: flex-end;
+                }
+                &:before {
+                    @media screen and (max-width: $md) {
+                        left: initial;
+                        right: 0;
+                    }
+                }
+            }
+            &.information {
+                flex-direction: column;
+                align-items: flex-start;
+                .seller {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 4px;
+                    p {
+                        font-size: rem(14);
+                        margin-right: 8px;
+                    }
+                    a {
+                        font-size: rem(14);
+                        font-weight: 700;
+                        text-decoration: underline;
+                        transition: color .3s;
+                        &:hover {
+                            color: var(--primary);
+                        }
+                    }
+                }
+                .text {
+                    margin-bottom: 4px;
+                    p {
+                        font-size: rem(14);
+                    }
+                }
+                .delivery {
+                    display: flex;
+                    align-items: center;
+                    .icon {
+                        margin-right: 12px;
+                        svg {
+                            path {
+                                transition: .3s;
+                            }
+                        }
+                    }
+                    .text {
+                        p {
+                         text-decoration: underline;
+                         color: var(--secondary);
+                         font-size: rem(14);   
+                         transition:  .3s;
+                        }
+                    }
+                    &:hover {
+                        .icon {
+                            svg {
+                                path {
+                                    fill: var(--primary)
+                                }
+                            }
+                        }
+                        .text {
+                            p {
+                                color: var(--primary);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottom {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 32px;
+        @media screen and (max-width: $sm) {
+            flex-direction: column;
+        }
+        .total {
+            @extend %end;
+            .title {
+                font-size: rem(24);
+                margin-right: 12px;
+                font-weight: 700;
+            }
+            .summ {
+                font-size: rem(24);
+                font-weight: 700;
+            }
+        }
+    }
+}
