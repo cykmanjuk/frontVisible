@@ -1,0 +1,89 @@
+// Font
+$mainFont                : 'Lato', sans-serif;
+
+// Size
+$mainFontColor           : #101010;
+$mainFontSize            : 20px;
+$mainFontWeight          : 400;
+$mainLineHeight          : 1.4;
+
+$xlg                     : 1500px;
+$lg                      : 1280px;
+$md                      : 980px;
+$sm                      : 750px;
+$xs                      : 500px;
+$xxs                     : 340px;
+
+
+:root {
+    --primary            : #000;
+    --secondary          : #ccc;
+    --text               : #000;
+    --textGray           : rgba(0,0,0,.5);
+    --cross              : #fc5c65;
+    --link               : #545454;
+    --border             : rgba(0,0,0, .1);
+    --indent8            : 8px;
+    --indent12           : 12px;
+    --indent16           : 16px;
+    --indent24           : 24px;
+    --indent32           : 32px;
+    --indent40           : 40px;
+    --indent48           : 48px;
+    --gap                : 24px;
+    --halfContainer      : 700px;
+    --btnHeight          : 50px;
+    --column             : calc((2*var(--halfContainer) - 11*var(--gap)) / 12);
+    --btnHeight          : 49px;
+    --columnGap          : calc(var(--column) + var(--gap));
+    --addPadd            : var(--columnGap);
+    
+    @media screen and (max-width: $xlg) {
+      --halfContainer      : calc(50vw - 30px);
+    }
+    @media screen and (max-width: $md) {
+      --gap                : 24px;
+      --halfContainer      : calc(50vw - 20px);
+    }
+    @media screen and (max-width: $sm) {
+      --gap                : 12px;
+      --halfContainer      : calc(50vw - 15px);
+    }
+    @media screen and (max-width: $xs) {
+      --gap                : 8px;
+      --halfContainer      : calc(50vw - 10px);
+    }
+}
+
+
+.container {
+  padding: 0 calc(50% - var(--halfContainer));
+  @media screen and (max-width: $xlg) {
+    padding: 0 30px;
+  }
+  @media screen and (max-width: $md) {
+    padding: 0 20px;
+  }
+  @media screen and (max-width: $sm) {
+    padding: 0 15px;
+  }
+  @media screen and (max-width: $xs) {
+    padding: 0 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+

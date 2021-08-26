@@ -1,0 +1,20 @@
+.phones {
+    .list {
+        display: flex;
+        .item {
+            margin-right: 2vw;
+            .link {
+                display: flex;
+                align-items: baseline;
+                @extend %underlineWhite;
+                svg,img {
+                    margin-right: 8px
+                }
+                span {
+                    color: #fff;
+                    font-size: rem(18);
+                }
+            }
+        }
+    }
+}

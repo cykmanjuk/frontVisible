@@ -1,0 +1,37 @@
+// header style
+
+header.header {
+  @extend .container;
+    .logo {
+      margin-right: 32px;
+    }
+    .top {
+      @extend %between;
+      padding: 10px 20px;
+      background-color: #000;
+      @import "components/headerElements/topMenu"; 
+      @import "components/headerElements/burder"; 
+      @import "components/headerElements/phones"; 
+      @import "components/headerElements/callBack";
+      @import "components/headerElements/authorization";
+    }
+    .middle {
+      @extend %between;
+      padding: 10px 20px;
+      background-color: #fff;
+      @import "components/headerElements/searchForm"; 
+      @import "components/headerElements/comparison"; 
+      @import "components/headerElements/like"; 
+      @import "components/headerElements/cart"; 
+    }
+    .bottom {
+      @extend %between;
+      padding: 10px 20px;
+      @import "components/headerElements/dropDownMenu"; 
+
+    }
+    .elements {
+      display: flex;
+      align-items: center;
+    }
+}

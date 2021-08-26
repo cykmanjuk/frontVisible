@@ -1,0 +1,76 @@
+.counter {
+    min-height: 40px;
+    @extend %between;
+    align-items: stretch;
+    border: 1px solid#000;
+    .counterBtn {
+        position: relative;
+        cursor: pointer;
+        width: 40px;
+        @extend %center;
+        .line {
+           overflow: hidden;
+            transform: translate(-50%, -50%);
+            background-color: #ccc;
+            &.l1 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 11px;
+                height: 1px;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0%;
+                    left: -11px;
+                    width: 11px;
+                    height: 1px;
+                    background-color: var(--text);
+                    transition: left .3s;
+                }
+            }
+            &.l2 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 1px;
+                height: 11px;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 11px;
+                    left: 0%;
+                    width: 1px;
+                    height: 11px;
+                    background-color: var(--text);
+                    transition: top .3s;
+                }
+            }
+        }
+        &:hover {
+            .line {
+                &.l1 {
+                    &:before {
+                        left: 0;
+                    }
+                }
+                &.l2 {
+                    &:before {
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+    .counterInput {
+        @extend %center;
+        input {
+            height: 100%;
+            font-size: rem(14);
+            text-align: center;
+            @media screen and (max-width: $sm) {
+                max-width: 30px;
+          }
+        }
+    }
+}

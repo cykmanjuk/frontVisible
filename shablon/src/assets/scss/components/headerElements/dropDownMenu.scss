@@ -1,0 +1,125 @@
+.dropDownMenu {
+
+    .list {
+        @extend %start;
+        flex-grow: 1;
+        .item {
+            @extend %start;
+            padding: 5px 10px;
+            margin-right: 16px;
+            position: relative;
+            list-style-type: none!important;
+            margin-left: 0!important;
+            .link {
+            color: #000;
+        
+            font-size: rem(16); 
+            }
+            .burger {
+                cursor: pointer;
+                width: 20px;
+                height: 12px;
+                position: relative;
+                margin-right: 16px;
+                .line {
+                    position: absolute;
+                    left: 0;
+                    height: 2px;
+                    background-color: #000;
+                    transition: width .3s;
+                    &.l1 {
+                        top: 0;
+                        width: 100%;
+                    }
+                    &.l2 {
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 100%;
+                    }
+                    &.l3 {
+                        bottom: 0;
+                        width: 50%;
+                    }
+                }
+            }
+
+            .subMenu {
+                position: absolute;
+                top: 32px;
+                left: 0;
+                z-index: 10;
+                border: 1px solid#000;
+                background-color: #fff;
+                min-width: 200px;
+                transition: opacity .3s;
+                z-index: -9999;
+                display: none;
+                .list {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    background-color: #fff;
+                    .item {
+                        position: static;
+                        list-style-type: none!important;
+                        margin: 0!important;
+                        display: flex;
+                        width: 100%;
+                        transition: background-color .3s;
+                        .link {
+                            padding: 10px;
+                            width: 100%;
+                            height: 100%;
+                            transition: color .3s;
+                        }
+                        .innerSubMenu {
+                            position: absolute;
+                            top: -1px;
+                            left: 100%;
+                            background-color: #fff;
+                            z-index: 10;
+                            border: 1px solid#000;
+                            min-width: 200px;
+                            transition: opacity .3s ;
+                            z-index: -10;
+                            opacity: 0;
+                            min-height: calc(100% + 2px);
+                        }
+                        &:hover {
+                            background-color: var(--primary);
+                            &>.link {
+                                color: #fff;
+                            }
+                            &>.innerSubMenu {
+                                height: initial;
+                                z-index: 10;
+                                opacity: 1;
+                                .list {
+                                    background-color: #fff;
+                                    .item {
+
+                                        &:hover {
+                                            &>.innerSubMenu {
+                                                height: initial;
+                                                z-index: 10;
+                                                opacity: 1;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .subMenu {
+                    display: block;
+                    height: initial;
+                    z-index: 10;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

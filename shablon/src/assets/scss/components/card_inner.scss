@@ -1,0 +1,140 @@
+
+.itemImg {
+    @extend %center;
+    margin-bottom: rem(12);
+    img {
+        object-fit: contain;
+        max-height: 250px;
+    }
+}
+.itemPrice {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(12);
+    @media screen and (max-width: $xs) {
+        flex-wrap: wrap;
+    }
+    .oldPrice {
+        a, p, span {
+            font-size: rem(18);
+            color: var(--gray); 
+            font-weight: bold;
+            @extend %crossedOut;
+        }
+    }
+    .newPrice {
+        a, p, span {
+            font-size: rem(22);
+            color: var(--red); 
+            font-weight: bold;
+        }
+    }
+}
+
+.itemTitle {
+    margin-bottom: rem(12);
+        a, p, span {
+        font-size: rem(16);
+        color: var(--link);
+    }
+}
+.tagList {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    @extend %column;
+    .tagItem {
+        padding: 10px 4px;
+        a, p, span {
+            color: #fff;
+            font-size: rem(12);
+        }
+    }
+}
+.controlsList {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    @extend %end;
+    .controlsItem {
+        cursor: pointer;
+        margin-right: rem(12);
+        &.cardLike {
+            svg {
+
+                path {
+                    stroke-dasharray: 0;
+                }
+
+            }
+            &:hover {
+
+                svg {
+                    path {
+                        animation-duration: 1s;
+                        animation-name: anim;
+                        //animation-iteration-count: infinite;
+                        //animation-direction: alternate;
+                    }
+                }
+            }
+            &.active {
+                svg {
+                    path {
+                        fill: var(--primary );
+                    }
+                }
+            }
+        }
+        &.cardComparison {
+            .icon {
+                position: relative;
+                width: 16px;
+                height: 20px;
+                margin-right: 6px;
+                .line {
+                    position: absolute;
+                    bottom: 0;
+                    width: 2px;
+                    background-color: #000;
+                    transition: height .3s;
+                    &.l1 {
+                        height: 75%;
+                        left: 0;
+                        height: 80%;
+                    }
+                    &.l2 {
+                        left: calc(50% - 1px);
+                        height: 100%;
+                    }
+                    &.l3 {
+                        right: 0;
+                        height: 70%;
+                    }
+                }
+            }
+            &:hover {
+                .icon {
+                    .line {
+                        height: 100%;
+                    }
+                }
+            }
+            &.active {
+                .icon {
+                    .line {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        &:last-child {
+
+        }
+    }
+}
+
+.bottom {
+    @extend %between;
+    align-items: stretch;
+}

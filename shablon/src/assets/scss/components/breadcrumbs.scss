@@ -1,0 +1,30 @@
+.breadcrumbs {
+    margin-bottom: 24px;
+    .list {
+        @extend %start;
+        .item {
+            margin-right: 32px;
+            position: relative;
+            .link {
+                @extend %underlineBlack;
+                font-size: rem(12);
+                font-weight: 400;
+            }
+            .icon {
+                position: absolute;
+                bottom: 6px;
+                right: -16px;
+            }
+            &:last-child {
+                pointer-events: none;
+                opacity: .5;
+                .link {
+                    pointer-events: none;
+                }
+                .icon {
+                    display: none;
+                }
+            }
+        }
+    }
+}

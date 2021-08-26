@@ -1,0 +1,26 @@
+.list {
+    .title {
+        margin-bottom: 24px;
+        p,a,span {
+            color: #fff;
+            font-size: rem(12);
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+    }
+    .item {
+        .link {
+            color: #fff;
+            font-size: rem(12);
+            @extend %underlineWhite;
+        }
+    }
+}
+
+
+
+
+
+
+
+

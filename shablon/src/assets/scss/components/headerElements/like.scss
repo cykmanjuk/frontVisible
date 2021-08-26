@@ -1,0 +1,29 @@
+.like {
+    position: relative;
+    margin-right: 24px;
+    svg {
+
+        path {
+            stroke-dasharray: 0;
+        }
+
+    }
+    .quantity {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: rem(11);
+        line-height: 1;
+    }
+    &:hover {
+
+        svg {
+            path {
+                animation-duration: 1s;
+                animation-name: anim;
+
+            }
+        }
+    }
+}

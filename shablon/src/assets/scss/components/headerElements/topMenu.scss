@@ -1,0 +1,15 @@
+.topMenu {
+    flex-grow: 1;
+   .list {
+      display: flex;
+      justify-content: flex-start;
+      .item {
+          margin-right: 2vw;
+          .link {
+              color: #fff;
+              font-size: rem(18);
+              @extend %underlineWhite;
+          }
+      }
+   }
+}

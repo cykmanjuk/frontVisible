@@ -1,0 +1,107 @@
+ @import "utils/libs";
+ @import "base/reset";
+ @import "base/vars";
+ @import "utils/grid";
+ @import "utils/mixins";
+ @import "utils/buttons";
+ @import "utils/titles";
+ @import "components/forms";
+
+// @import "utils/animate";
+ @import "utils/counter";
+// @import "utils/select";
+ @import "components/mobile_menu";
+ @import "components/header";
+ @import "components/stickyHeader";
+ @import "components/footer";
+// @import "components/breadcrumbs";
+ @import "components/modals";
+// @import "pages/catalog";
+// @import "pages/personalArea";
+// @import "pages/cartPage";
+// @import "pages/checkOut";
+// @import "pages/comparison";
+// @import "components/pagination";
+// @import "components/tabs";
+// @import "components/socials";
+// @import "components/map";
+ //@import "components/catalogFilter";
+ //@import "components/ddSearch";
+
+
+
+*, *:before , *:after {
+	box-sizing: border-box;
+}
+
+html {
+  line-height: $mainLineHeight;
+	font-size: $mainFontSize;
+	color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $lg) {
+		font-size: 18px;
+  }
+  @media screen and (max-width: $md) {
+		font-size: 16px;
+  }
+  @media screen and (max-width: $sm) {
+		font-size: 14px;
+  }
+}
+
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+	font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.siteBody {
+  min-height: 50vh;
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+}
+
+
+section, article {
+  position: relative;
+  @extend .container;
+}
+
+
+table td {
+  font-size: rem(16);
+}
+
+
+
+// .animateImg.first {
+//   animation: swimmingUp 7s infinite ease-in-out;
+// }
+// .animateImg.second {
+//   animation: swimmingDown 7s infinite ease-in-out;
+// }
+
+.linkEffect {
+  @extend %linkEffect;
+}
+.linkEffect2 {
+  @extend %linkEffect2;
+}
+.linkEffect3 {
+  @extend %linkEffect3;
+}
+
+
+.kvadrat {
+  .list {
+    .item {
+      height: calc(3*var(--column) + 2*var(--gap));
+    }
+  }
+}

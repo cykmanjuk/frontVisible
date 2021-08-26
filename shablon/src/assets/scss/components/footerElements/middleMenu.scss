@@ -1,0 +1,12 @@
+.list {
+
+    .item {
+        margin-bottom: 8px;
+        .link {
+            font-size: rem(14);
+            color: var(--text);
+            font-weight: 300;
+            @extend %underlineBlack;
+        }
+    }
+}

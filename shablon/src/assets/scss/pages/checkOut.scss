@@ -1,0 +1,169 @@
+.checkOut {
+    
+    .form {
+        display: flex;
+        @media screen and (max-width: $md) {
+            flex-wrap: wrap;
+        }
+    }
+    .left {
+        width: 70%;
+        @media screen and (max-width: $md) {
+            width: 100%;
+         }
+    }
+    .right {
+        width: 30%;
+        padding-left: 30px;
+        @media screen and (max-width: $md) {
+            width: 100%;
+            padding: 0;
+            margin-bottom: 24px;
+         }
+    }
+    .step {
+        padding: 20px;
+        border: 1px solid var(--border);
+        margin-bottom: 24px;
+        .top {
+            display: flex;
+            justify-content: space-between;
+            .titleWrap {
+                @media screen and (max-width: $sm) {
+                   margin-bottom: 16px;
+                  }
+                .title {
+                    font-size: rem(20);
+                    font-weight: 700;
+                    color: var(--text);
+                    margin-bottom: 16px;
+                }
+                .subTitle {
+                    font-size: rem(14);
+                    font-weight: 400;
+                    color: var(--textGray);
+                }
+            }
+            .change {
+                a, p, span {
+                    color: var(--text);
+                   font-size: rem(14); 
+                   @extend %underlineBlack;
+                }
+            }
+        }
+        .block {
+            padding: 20px;
+            border: 1px solid var(--border);
+            transition: box-shadow .3s;
+            .radio {
+                align-items: flex-start;
+                .radioField {
+                    margin-top: 0;
+                    width: 40px;
+                    height: 40px;
+                    svg {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 10;
+                    }
+
+                    label {
+                        width: 40px;
+                        height: 40px;
+                        &:after {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                .checkboxText {
+                    width: 100%;
+                    .title {
+                        @extend %underlineBlack;
+                    }
+                }
+            }
+            &:hover {
+                @extend %boxShadow;
+                .checkboxText {
+                    .title {
+                        &:before {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .bottom {
+            @extend %between;
+        }
+    }
+    .sticky {
+        border: 1px solid var(--border);
+        position: sticky;
+        padding: 20px;
+        top: 50px;
+        .top {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+            .title {
+                
+                p {
+    
+                }
+            }
+        }
+       
+        .product {
+            display: flex;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+            .imgWrap {
+                margin-right: 12px;
+                img {
+                    max-width: 50px;
+                    max-height: 70px;
+                }
+            }
+            .textWrap {
+
+                .title {
+                    border: none;
+                    p {
+                        font-size: rem(14);
+                    }
+                }
+                .price {
+                    p {
+                        font-weight: 700;
+                        font-size: rem(14);
+                    }
+                }
+                .quantity {
+                    p {
+                        font-size: rem(14);
+                    }
+                }
+            }
+        }
+        .bottom {
+
+            .line {
+                @extend %between;
+                margin-bottom: 8px;
+                .title {
+                    font-size: rem(14);
+                }
+                .quantity {
+                    font-size: rem(14);
+                    font-weight: 700;
+                }
+            }
+        }
+    } 
+}

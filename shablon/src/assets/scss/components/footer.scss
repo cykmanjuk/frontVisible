@@ -1,0 +1,81 @@
+// footer style
+
+footer.footer {
+    position: sticky;
+    bottom: 0;
+    .top {
+        background-color: #222222;
+        @extend .container;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+
+        @import "components/footerElements/topMenu"; 
+    }
+    .middle {
+      @extend .container;
+        @import "components/footerElements/middleMenu";
+
+        .phone {
+            margin-bottom: 8px;
+            a {
+                font-size: rem(16);
+                font-weight: 700;
+                color: var(--text);
+                @extend %underlineBlack;
+            }
+        }
+        .backCall {
+            margin-bottom: 12px;
+        }
+    }
+    .bottom {
+      @extend .container;
+        margin-bottom: 24px;
+        @extend %between;
+        .copyright {
+            color: rgba(#000, .5);
+            flex-grow: 1;
+            font-size: rem(14);
+        }
+        .maxiTop {
+            color: var(--text);
+            opacity: .5;
+            transition: opacity .3s;
+            font-size: rem(14);
+            margin-right: 24px;
+            span {
+                font-weight: 700;
+                transition: color .3s;
+            }
+           &:hover {
+               opacity: 1;
+               span {
+                   color: #30aa5b;
+               }
+           }
+        }
+        .uniq {
+            color: var(--text);
+            opacity: .5;
+            transition: opacity .3s;
+            font-size: rem(14);
+            span {
+                font-weight: 700;
+                transition: color .3s;
+            }
+           &:hover {
+               opacity: 1;
+               span {
+                   color: #5454ac;
+               }
+           }
+        }
+    }
+    .block {
+        padding-right: 50px;
+        &.between {
+            @extend %columnBetween;
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.modal {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 500px;
+    .body {
+
+        .title {
+            margin-bottom: 12px;
+            text-align: center;
+            a, span, p {
+                font-size: rem(20);
+                color: var(--text);
+            }
+        }
+        .subTitle {
+            margin-bottom: 32px;
+            text-align: center;
+            a, span, p {
+                font-size: rem(16);
+                color: var(--text);
+            }
+        }
+        .text {
+            margin-bottom: 32px;
+            a, span, p {
+                font-size: rem(14);
+                color: var(--text);
+            }
+        }
+        // FIELD START ----------------
+        .field {
+            margin-bottom: 16px;
+            position: relative;
+        label {
+            @extend %center;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            font-size: rem(12);
+            color: rgba(#fff, .5);
+            background-color: #313A3D;
+            cursor: text;
+            left: 0;
+            text-transform: uppercase;
+            position: absolute;
+            pointer-events: none;
+            top: 0px;
+            transition: all 0.2s;
+            max-width: 100%;
+            transition: .3s;
+            &.active {
+            width: 150px;
+            color: #fff;
+            font-size: rem(10);
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+        }
+    
+        input {
+            border: 1px solid var(--gray);
+            height: 40px;
+            padding-left: 170px;
+            &:hover {
+            &+ label {
+                font-size: rem(10);
+                padding-left: 10px;
+                padding-right: 10px;
+                width: 150px;
+            }
+            }
+        }
+    
+        textarea {
+            border: 1px solid var(--gray);
+            padding-left: 170px;
+            &:hover {
+            &+ label {
+                width: 150px;
+                font-size: rem(10);
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            }
+        }
+        } 
+    // FIELD END ----------------
+    }
+}

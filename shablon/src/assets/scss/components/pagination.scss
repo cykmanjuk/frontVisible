@@ -1,0 +1,46 @@
+.paggination {
+    @extend %between;
+    .arrow {
+        @extend %underlineBlack;
+        font-size: rem(14);
+        &.left {
+
+        }
+        &.right {
+
+        }
+
+    }
+    .list {
+        @extend %center;
+        .item {
+            margin-right: 20px;
+            box-shadow: none;
+            @extend %center;
+            width: 30px;
+            height: 30px;
+            .text {
+                @extend %underlineBlack;
+                font-size: rem(14);
+                &:before {
+                    width: 100%;
+                }
+            }
+            &:hover {
+                box-shadow: none;
+                .text {
+                    &:before {
+                        width: 0;
+                    }
+                }
+            }
+            &.active {
+                .text {
+                    &:before {
+                        width: 0;
+                    }
+                }
+            }
+        }
+    }
+}

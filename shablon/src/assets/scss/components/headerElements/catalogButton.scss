@@ -1,0 +1,45 @@
+.catalogButton {
+    @extend %start;
+    padding: 5px 10px;
+    margin-right: 32px;
+    .title {
+       color: #000;
+       margin-right: 10px;
+       font-size: rem(16); 
+    }
+    .burger {
+        cursor: pointer;
+        width: 20px;
+        height: 12px;
+        position: relative;
+        .line {
+            position: absolute;
+            left: 0;
+            height: 2px;
+            background-color: #000;
+            transition: width .3s;
+            &.l1 {
+                top: 0;
+                width: 100%;
+            }
+            &.l2 {
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+            }
+            &.l3 {
+                bottom: 0;
+                width: 50%;
+            }
+        }
+  }
+  &:hover {
+    .burger {
+        .line {
+            &.l3 {
+                width: 100%;
+            }
+        }
+    }
+  }
+}
